@@ -1,23 +1,9 @@
 // Make the page slowly rotate
-let angle = 0;
 setInterval(() => {
-  angle += 0.1;
-  document.body.style.transform = `rotate(${angle}deg)`;
-  document.body.style.transition = 'transform 0.2s linear';
+  let angle = 0;
+  setInterval(() => {
+    angle += 0.1;
+    document.body.style.transform = `rotate(${angle}deg)`;
+    document.body.style.transition = 'transform 0.2s linear';
 }, 100);
-
-// Add a ridiculous floating message
-const msg = document.createElement('div');
-msg.textContent = 'egg roll';
-msg.style.position = 'fixed';
-msg.style.top = '10px';
-msg.style.left = '50%';
-msg.style.transform = 'translateX(-50%)';
-msg.style.background = 'hotpink';
-msg.style.color = 'white';
-msg.style.padding = '10px 20px';
-msg.style.fontSize = '24px';
-msg.style.fontFamily = 'Comic Sans MS, sans-serif';
-msg.style.zIndex = '9999';
-msg.style.boxShadow = '0 0 10px black';
-document.body.appendChild(msg);
+}, 1000)
